@@ -126,7 +126,7 @@ const data = {
           "Audit",
           "RGPD",
         ],
-        img: "tableau_bord.png",
+        img: "img/tableau_bord.png",
         link: "https://github.com/CAMARAMohamed01/stage_erp_mairie",
         detail: `
     Conception et développement complet ("from scratch") d'une solution centralisée de gestion patrimoniale et de suivi technique.
@@ -149,7 +149,7 @@ const data = {
       {
         title: "Projet Laravel — Site Web",
         tags: ["Laravel", "PHP", "HTML", "PostgreSQL", "UML", "Merise"],
-        img: "leboncoin.jpg",
+        img: "img/leboncoin.jpg",
         link: "https://github.com/CAMARAMohamed01/Sae_leboncoin",
         detail: `
           Développement complet d’un site web Laravel :
@@ -174,7 +174,7 @@ const data = {
           "Service client",
           "Restauration",
         ],
-        img: "mcdo.jpg",
+        img: "img/mcdo.jpg",
         link: "https://www.mcdonalds.fr/",
         detail: `
         Expérience en restauration rapide au sein de McDonald's.
@@ -194,7 +194,7 @@ const data = {
       {
         title: "Projet Universitaire — Application de gestion (C# / .NET)",
         tags: ["C#", ".NET", "PostgreSQL", "UML", "Merise"],
-        img: "esf.png",
+        img: "img/esf.png",
         link: "https://github.com/CAMARAMohamed01/SAE2.01",
         detail: `
         Projet universitaire : 
@@ -212,7 +212,7 @@ const data = {
       {
         title: "Projet C# — Gameplay",
         tags: ["C#", ".NET", "Game Dev", "POO"],
-        img: "jeu.png",
+        img: "img/jeu.png",
         link: "https://github.com/CAMARAMohamed01",
         detail: `
         Développement d’un jeu 2D interactif en C#/.NET.
@@ -230,7 +230,7 @@ const data = {
       {
         title: "Employé polyvalent — Sodexo (Jeux Olympiques 2024)",
         tags: ["Accueil", "Service", "Événementiel", "JO 2024"],
-        img: "jo.jpg",
+        img: "img/jo.jpg",
         link: "https://www.sodexo.fr/secteurs/sodexo-live",
         detail: `
         Mission événementielle pour les Jeux Olympiques 2024.
@@ -250,7 +250,7 @@ const data = {
       {
         title: "Web Designer — ALISON",
         tags: ["Bootstrap", "Responsive Design", "UX/UI", "Web Design"],
-        img: "alison.png",
+        img: "img/alison.png",
         link: "https://alison.com/",
         detail: `
         Conception de sites web modernes et responsives.
@@ -413,7 +413,7 @@ const data = {
           "Audit",
           "GDPR",
         ],
-        img: "tableau_bord.png",
+        img: "img/tableau_bord.png",
         link: "https://github.com/CAMARAMohamed01/stage_erp_mairie",
         detail: `
     End-to-end design and development ("from scratch") of a centralized asset management and technical tracking ERP solution.
@@ -436,7 +436,7 @@ const data = {
       {
         title: "Laravel Project — Web site",
         tags: ["Laravel", "PHP", "HTML", "PostgreSQL", "UML", "Merise"],
-        img: "./leboncoin.jpg",
+        img: ".img/leboncoin.jpg",
         link: "https://github.com/CAMARAMohamed01/Sae_leboncoin",
         detail: `
           Full Laravel application:
@@ -456,7 +456,7 @@ const data = {
       {
         title: "Multi-skilled Employe — McDonald's",
         tags: ["Teamwork", "Customer Service", "Food Service", "Fast-paced"],
-        img: "mcdo.jpg",
+        img: "img/mcdo.jpg",
         link: "https://www.mcdonalds.fr/",
         detail: `
         Fast-food work experience at McDonald's.
@@ -476,7 +476,7 @@ const data = {
       {
         title: "Universitary Projet — Management application (C# / .NET)",
         tags: ["C#", ".NET", "PostgreSQL", "UML", "Merise"],
-        img: "esf.png",
+        img: "img/esf.png",
         link: "https://github.com/CAMARAMohamed01/SAE2.01",
         detail: `
         University Project :
@@ -497,7 +497,7 @@ const data = {
       {
         title: "C# Project — Gameplay",
         tags: ["C#", ".NET", "Game Dev", "OOP"],
-        img: "jeu.png",
+        img: "img/jeu.png",
         link: "https://github.com/CAMARAMohamed01",
         detail: `
         Development of an interactive 2D game using C#/.NET.
@@ -515,7 +515,7 @@ const data = {
       {
         title: "Versatile Employee — Sodexo (2024 Olympic Games)",
         tags: ["Hospitality", "Service", "Event", "Olympics"],
-        img: "./jo.jpg",
+        img: ".img/jo.jpg",
         link: "https://www.sodexo.fr/secteurs/sodexo-live",
         detail: `
         Event mission during the 2024 Olympic Games.
@@ -535,7 +535,7 @@ const data = {
       {
         title: "Web Designer — ALISON",
         tags: ["Bootstrap", "Responsive Design", "UX/UI", "Web Design"],
-        img: "./alison.png",
+        img: ".img/alison.png",
         link: "https://alison.com/",
         detail: `
         Design and development of modern responsive websites.

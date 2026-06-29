@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Mohamed Camara</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- PAGE D'ACCUEIL -->
+  <section id="home" class="welcome">
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="welcome-content">
+      <p id="welcome-typed">Bienvenue sur mon portfolio</p>
+      <button id="enter-btn">Entrer</button>
+    </div>
+  </section>
+
+
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#parcours-education">Éducation</a></li>
+      <li><a href="#parcours-experiences">Expériences</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#languages">Langues</a></li>
+      <li><a href="#references">Références</a></li>
+    </ul>
+    <button id="lang-toggle">EN</button>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="top-header">
+    <h1 id="animated-name">Mohamed CAMARA</h1>
+    <button id="view-cv-btn">Voir CV / Print</button>
+  </header>
+
+
+
+  <main>
+    <section id="about">
+      <h2 data-i18n="about_title">À propos de moi</h2>
+
+      <div class="about-grid">
+        <div class="card about-card">
+          <h3 data-i18n="about_info_title">Infos & Contact</h3>
+          <!-- <p id="about-text" class="centered"></p> pas besoin pour l'instant -->
+          <ul class="about-list" id="about-info-list">
+            <li><strong>Email :</strong> mohamed.camara@etu.univ-smb.fr</li>
+            <li><strong>Email personnel :</strong></li>
+            <li><strong>Téléphone :</strong></li>
+            <li><strong>Ville :</strong> Annecy</li>
+            <li><strong>Études :</strong> BUT Informatique — IUT d’Annecy</li>
+          </ul>
+        </div>
+
+        <div class="card about-card">
+          <h3 data-i18n="about_hobbies_title">Passions</h3>
+
+          <ul class="about-list centered" id="hobbies-list">
+            <li data-i18n="hobby_DB">La conception et gestion de BDD</li>
+            <li data-i18n="hobby_web">Développement web</li>
+            <li data-i18n="hobby_mangas">Lire et regarder des mangas</li>
+            <li data-i18n="hobby_sport">Sport</li>
+            <li data-i18n="hobby_music">Ecouter de la musique</li>
+            <li data-i18n="hobby_projects">Création de projets personnels</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+      <h2 data-i18n="parcours_title">Parcours</h2>
+
+      <h3 data-i18n="edu_title">Éducation</h3>
+      <div id="parcours-education" class="card-grid"></div>
+
+      <h3 data-i18n="exp_title">Expériences</h3>
+      <div id="parcours-experiences" class="card-grid"></div>
+
+      <h3 data-i18n="projects_title">Projets universitaires</h3>
+      <div id="parcours-projects" class="card-grid"></div>
+
+    </section>
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio">
+      <div class="portfolio-header">
+        <h2 data-i18n="portfolio_title">Portfolio</h2>
+        <div id="filter-checkboxes"></div>
+      </div>
+      <div id="portfolio-list" class="card-grid"></div>
+    </section>
+
+    <!-- COMPETENCES TECHNIQUES -->
+    <section id="skills">
+      <h2 data-i18n="skills_title">Compétences techniques</h2>
+      <div id="skills-list" class="card-grid"></div>
+    </section>
+
+    <!-- LANGUES -->
+    <section id="languages">
+      <h2 data-i18n="languages_title">Langues</h2>
+      <div id="languages-list" class="card-grid"></div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section id="references">
+      <h2 data-i18n="references_title">Références</h2>
+      <div id="references-list" class="card-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- MODAL CV -->
+  <div id="cv-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-cv">✕</button>
+
+
+      <iframe id="cv-frame"></iframe>
+      <div class="modal-actions">
+        <button id="print-cv">Print CV</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,624 @@
+/* PAGE D’ACCUEIL SOMBRE CHOCOLAT */
+.welcome {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1b120c 0%, #2d1e14 50%, #0f0906 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F0E6D8;
+}
+
+/* Canvas particules */
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lumière douce en arrière-plan */
+.welcome::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
+  animation: floatLight 6s infinite alternate ease-in-out;
+}
+
+@keyframes floatLight {
+  from {
+    transform: translate(-60%, -55%);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translate(-40%, -45%);
+    opacity: 0.7;
+  }
+}
+
+/* Contenu */
+.welcome-content {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#welcome-typed {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: monospace;
+  color: #E6D3BF;
+  border-right: 3px solid #E6D3BF;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: blinkWelcome 0.7s infinite;
+}
+
+@keyframes blinkWelcome {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+@keyframes typingWelcome {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 30ch;
+  }
+}
+
+/* .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  opacity: 0.85;
+} */
+
+/* Bouton */
+#enter-btn {
+  padding: 12px 22px;
+  background: #8A5E3B;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.25s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#enter-btn:hover {
+  background: #A9744A;
+  transform: translateY(-2px);
+}
+
+/* Navbar cachée au début */
+nav#navbar {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.scrolled nav#navbar {
+  opacity: 1;
+}
+
+
+
+/*
+COLORS : Marron Chocolat
+*/
+:root {
+  --primary: #5D4037;
+  --accent: #BF8F2E;
+  --text: #2C1E1A;
+  --medium-bg: #EFE7DD;
+  --card-bg: #FBF7F2;
+  --badge-bg: #E7D9C9;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+/*
+RESET
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+BODY
+*/
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--medium-bg);
+  scroll-behavior: smooth;
+  padding-bottom: 50px;
+  color: var(--text);
+}
+
+/*
+NAVBAR
+*/
+
+/* la cachée dans la page d'acceuil puis apparait */
+nav#navbar {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+nav#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFFEE;
+  backdrop-filter: blur(6px);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+nav#navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav#navbar a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+nav#navbar a:hover {
+  color: var(--accent);
+}
+
+#lang-toggle {
+  padding: 6px 12px;
+  border: 1px solid #bbb;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#lang-toggle:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/*
+HEADER
+*/
+header {
+  margin-top: 110px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+header button {
+  padding: 10px 16px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: 0.25s;
+}
+
+/* Bouton fixe en bas à droite */
+header button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+header button:hover {
+  background: var(--accent);
+}
+
+/*
+MAIN
+*/
+main {
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 55px;
+}
+
+h2 {
+  margin-bottom: 18px;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  color: var(--accent);
+}
+
+/*
+CARD GRID / CARTES
+*/
+.card-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card {
+  padding: 18px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--shadow);
+  border-left: 4px solid var(--primary);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-left-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* //////// imgg*/
+
+/* Image en haut des cartes */
+.card-img {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.25s ease;
+}
+
+.card-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Le contenu textuel de la carte */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* ///////////////////////////////// */
+/* =========================================
+NOUVEAU : CORRECTION POUR LES TAGS
+========================================= */
+
+
+.tags-container {
+display: flex;
+flex-wrap: wrap;
+/*  / CRUCIAL : Force les tags à passer à la ligne s'il n'y a plus de place / */
+gap: 8px; 
+margin-top: 5px;
+}
+
+
+.tag {
+display: inline-block;
+padding: 4px 10px;
+font-size: 0.75rem;
+font-weight: 600;
+background-color: var(--primary);
+color: #fff; 
+border-radius: 20px;
+white-space: nowrap;
+}
+/*
+RÉFÉRENCES 50/50
+*/
+#references-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#references-list .card {
+  width: 100%;
+}
+
+/*
+BADGES
+*/
+.badge {
+  background: var(--badge-bg);
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-right: 6px;
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/*
+ABOUT SECTION
+*/
+.about-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 20px;
+}
+
+.about-card {
+  text-align: center;
+  padding: 25px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.about-list li {
+  margin-bottom: 8px;
+}
+
+/*
+FILTRAGE
+*/
+#filter-input {
+  width: 260px;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  outline: none;
+}
+
+#filter-input:focus {
+  border-color: var(--primary);
+}
+
+/*
+MODAL
+*/
+.modal {
+  position: fixed;
+  margin-top: 10vh;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Container modal */
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  height: 90vh;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Bouton Close flottant */
+#close-cv {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  background: rgba(236, 220, 220, 0.85);
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+
+  padding: 4px 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  transition: 0.2s;
+}
+
+#close-cv:hover {
+  background: rgba(255, 255, 255, 1);
+  color: var(--accent);
+  transform: scale(1.12);
+}
+
+/* L’iframe doit occuper tout l’espace */
+.modal-content iframe {
+  flex: 1;
+  border: none;
+}
+
+
+.modal-actions {
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  text-align: right;
+}
+
+.modal-actions button {
+  padding: 8px 14px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  border: none;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+.modal-actions button:hover {
+  background: var(--accent);
+}
+
+/*
+SKILLS
+*/
+#skills-list ul li {
+  margin-left: 20px;
+}
+
+/* BARS */
+.level-bar {
+  width: 100%;
+  height: 10px;
+  background: #cfcfcf;
+  border-radius: 6px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.level-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+/*
+ANIMATION DU NOM
+*/
+
+#animated-name {
+  font-family: monospace;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  filter: blur(8px);
+  transform: scale(0.85);
+  animation: zoomBlur 1s ease-out forwards;
+}
+
+@keyframes zoomBlur {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(0.85);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+
+
+/*
+TAGS FILTRE
+*/
+#filter-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#filter-checkboxes input[type="checkbox"] {
+  display: none;
+}
+
+#filter-checkboxes label {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  margin-bottom: 6px;
+  margin-top: -2px;
+  border-radius: 15px;
+  border: 2px solid #bbb;
+  background: #F3F3F3;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 14px;
+}
+
+/* Hover */
+#filter-checkboxes input[type="checkbox"]+label:hover {
+  background: #e3e3e3;
+  border-color: #999;
+}
+
+/* Checked */
+#filter-checkboxes input[type="checkbox"]:checked+label {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 3px 10px rgba(191, 143, 46, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Hover actif */
+#filter-checkboxes input[type="checkbox"]:checked+label:hover {
+  background: #D4A82B;
+}
